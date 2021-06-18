@@ -58,6 +58,12 @@ void getFiles(string path, vector<string>& files) {
 //获取文件名
 string GetImageName(string path)
 {
+	/*
+	   C:\\xxx\\xxx\\ xxx .bmp
+	                |     |
+	              first   |
+			     last
+	*/
 	string ImageName;
 	int first = path.find_last_of("\\");
 	int last = path.find_first_of(".");
